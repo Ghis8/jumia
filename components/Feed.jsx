@@ -5,9 +5,10 @@ import {FaGreaterThan} from 'react-icons/fa'
 import React from 'react'
 import styles from '../styles/feed.module.css'
 import {province,categories,ads} from './data'
+import {useRouter} from 'next/router'
 
 const Feed = () => {
-    
+  const router=useRouter()
   return (
     <div className={styles.container}>
         <div className={styles.region}>
@@ -22,7 +23,7 @@ const Feed = () => {
                         ))
                     }
                 </div>
-                <button className={styles.btn}>Post Free Ad Now!</button>
+                <button onClick={()=>router.push('/posts/new')} className={styles.btn}>Post Free Ad Now!</button>
             </div>
             <div className={styles.card}>
                 <Image src="/images/Dem-Rep-Congo.png" width='250' height='200' />
@@ -83,7 +84,7 @@ const Feed = () => {
             {
               ads.map((a)=>(
                 <div className={styles.adItem}>
-                    <Image  width={150} height={150}/>
+                    <Image src={a.img} width={150} objectFit='contain' height={120}/>
                     <div className={styles.itemDesc}>
                         <div className={styles.descLeft}>
                             <h3 className={styles.adItemTitle}>{a.title}</h3>
@@ -105,7 +106,7 @@ const Feed = () => {
         <div className={styles.selling}>
             <h1>What Do you Have to Sell</h1>
             <span>Sell everything on Jumia</span>
-            <button className={styles.btn}>Post Free Ad Now!</button>
+            <button onClick={()=>router.push('/posts/new')} className={styles.btn}>Post Free Ad Now!</button>
 
         </div>
     </div>

@@ -70,14 +70,14 @@ export const ads=[
     {
         title:"Plot for sale",
         desc:"land & plots",
-        img:'',
+        img:'/images/plot.jpg',
         amount:"15,000",
         date:'Yesterday,15:30'
     },
     {
         title:"House for rent",
         desc:"house for rent, Goma",
-        img:'',
+        img:'/images/rentHouse.jpeg',
         amount:"400",
         date:'today,12:10'
     },
