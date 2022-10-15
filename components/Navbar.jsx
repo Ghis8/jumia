@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from '../styles/navbar.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import {AiOutlineUserAdd} from 'react-icons/ai'
+import {AiOutlineUserAdd,AiOutlineMenu} from 'react-icons/ai'
 import {useRouter} from 'next/router'
 
 const Navbar = () => {
@@ -13,12 +13,13 @@ const Navbar = () => {
     }
   return (
     <div className={styles.container}>
+        <AiOutlineMenu className={styles.menuIcon}/>
         <div className={styles.left}>
-            <div>
+            <div className={styles.titleName}>
                 <h1 className={styles.change}>JUMIA</h1>
                 <Image src="/images/icon1.png" width="40" height="20" alt="icon" />
             </div>
-            <div>
+            <div className={styles.adLinks}>
                 <Link href="">All Ads</Link>
                 <Link href="">Help</Link>
                 <button className={styles.btn}>French</button>

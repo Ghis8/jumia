@@ -4,7 +4,9 @@
     50%{color: red;}
     100%{color: black;}
 }
-
+.menuIcon{
+    display:none;
+}
 .container{
     display: flex;
     align-items: center;
@@ -64,6 +66,8 @@
     cursor: pointer;
 
 }
+
 .btn:hover{
     background-color: rgb(133, 133, 233);
 }
+

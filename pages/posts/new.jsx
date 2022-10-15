@@ -93,7 +93,7 @@ console.log(phone)
                             </div>
                             <div className={styles.whatsapp}>
                                 <input type="checkbox" className={styles.checkbox}/>
-                                <p>Works with whatsapp</p>
+                                <span>Works with whatsapp</span>
                             </div>
                         </div>
 
